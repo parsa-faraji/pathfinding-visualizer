@@ -1,8 +1,8 @@
 <div align="center">
 
-![Pathfinding Visualizer](https://socialify.git.ci/parsa-faraji/pathfinding-visualizer/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Circuit%20Board&theme=Dark)
+![Header](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=14,20,24&height=200&section=header&text=Pathfinding%20Visualizer&fontSize=42&fontAlignY=35&desc=A*%20|%20Dijkstra%20|%20BFS%20|%20DFS&descAlignY=55&animation=twinkling)
 
-# Pathfinding Visualizer
+
 
 Interactive visualization of pathfinding algorithms. Draw walls, move start/end points, and watch algorithms find the shortest path.
 
