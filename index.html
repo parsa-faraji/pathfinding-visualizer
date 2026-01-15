@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathfinding Visualizer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <h1>Pathfinding Visualizer</h1>
+            <p>Visualize how pathfinding algorithms explore and find the shortest path</p>
+        </header>
+
+        <div class="controls">
+            <div class="control-group">
+                <label>Algorithm</label>
+                <select id="algorithm">
+                    <option value="dijkstra">Dijkstra's Algorithm</option>
+                    <option value="astar">A* Search</option>
+                    <option value="bfs">Breadth-First Search</option>
+                    <option value="dfs">Depth-First Search</option>
+                    <option value="greedy">Greedy Best-First</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label>Speed</label>
+                <select id="speed">
+                    <option value="fast">Fast</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="slow">Slow</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label>Pattern</label>
+                <select id="pattern">
+                    <option value="none">None</option>
+                    <option value="random">Random Walls</option>
+                    <option value="maze">Recursive Maze</option>
+                    <option value="horizontal">Horizontal Lines</option>
+                    <option value="vertical">Vertical Lines</option>
+                </select>
+            </div>
+
+            <div class="control-buttons">
+                <button id="visualize" class="btn btn-primary">Visualize</button>
+                <button id="clearPath" class="btn btn-secondary">Clear Path</button>
+                <button id="clearAll" class="btn btn-secondary">Clear All</button>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <div class="instruction">
+                <span class="node-icon start"></span>
+                <span>Drag to move start</span>
+            </div>
+            <div class="instruction">
+                <span class="node-icon end"></span>
+                <span>Drag to move end</span>
+            </div>
+            <div class="instruction">
+                <span class="node-icon wall"></span>
+                <span>Click/drag to add walls</span>
+            </div>
+        </div>
+
+        <div class="grid-container">
+            <div class="grid" id="grid"></div>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <span class="stat-label">Nodes Visited</span>
+                <span class="stat-value" id="nodesVisited">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Path Length</span>
+                <span class="stat-value" id="pathLength">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Time</span>
+                <span class="stat-value" id="time">0ms</span>
+            </div>
+        </div>
+
+        <div class="algorithm-info" id="algorithmInfo">
+            <h3>Dijkstra's Algorithm</h3>
+            <p class="guarantee">Guarantees shortest path</p>
+            <p class="description">Explores nodes in order of distance from start. Always finds the shortest path but explores many nodes.</p>
+        </div>
+
+        <footer class="footer">
+            <p>Built by <a href="https://github.com/parsa-faraji" target="_blank">Parsa Faraji Alamouti</a></p>
+        </footer>
+    </div>
+
+    <script src="algorithms.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
